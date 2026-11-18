@@ -7,23 +7,26 @@ class Nodimargo < Formula
 
   base = "https://github.com/magia-practica/nodimargo-release/releases/download/v#{version}"
 
-  # FILL IN: replace each ASSET name with the real file name from the v0.4.0
-  # release, and each SHA256 with `shasum -a 256 <file>`.
+  # The sha256 values are filled in by the bump workflow.
   on_macos do
     on_arm do
-      url "#{base}/ASSET_MACOS_ARM64.tar.gz"
-      sha256 "SHA256_MACOS_ARM64"
+      url "#{base}/nodimargo-v#{version}-aarch64-apple-darwin.tar.gz"
+      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
     end
     on_intel do
-      url "#{base}/ASSET_MACOS_X86_64.tar.gz"
-      sha256 "SHA256_MACOS_X86_64"
+      url "#{base}/nodimargo-v#{version}-x86_64-apple-darwin.tar.gz"
+      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
     end
   end
 
   on_linux do
+    on_arm do
+      url "#{base}/nodimargo-v#{version}-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+    end
     on_intel do
-      url "#{base}/ASSET_LINUX_X86_64.tar.gz"
-      sha256 "SHA256_LINUX_X86_64"
+      url "#{base}/nodimargo-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
     end
   end
 
@@ -43,6 +46,6 @@ class Nodimargo < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/nodimargo version")
+    assert_match version.to_s, shell_output("#{bin}/nodimargo --version")
   end
 end
