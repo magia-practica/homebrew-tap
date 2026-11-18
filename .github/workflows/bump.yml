@@ -26,7 +26,7 @@ jobs:
       FORMULA: Formula/nodimargo.rb
       BASE: https://github.com/magia-practica/nodimargo-release/releases/download
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Update version and checksums
         run: |
