@@ -11,22 +11,22 @@ class Nodimargo < Formula
   on_macos do
     on_arm do
       url "#{base}/nodimargo-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+      sha256 "fb34f6db2567e894bb3e15d989dceea10d0a9d29e3f7d2f94f966cef72b46ab8"
     end
     on_intel do
       url "#{base}/nodimargo-v#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+      sha256 "39858f15932ff3fac2f684effc5dd41f7649a28b109820235a9979abffd4235c"
     end
   end
 
   on_linux do
     on_arm do
       url "#{base}/nodimargo-v#{version}-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+      sha256 "7adeb8266f5cee2cb1a3fa4905df65f4d8b241dd3394010bb4af4742dd59ea66"
     end
     on_intel do
       url "#{base}/nodimargo-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "0000000000000000000000000000000000000000000000000000000000000000"
+      sha256 "07000abb5d0ad2970658e4dfbb83becbdacad2eeef7004ff12ce74b5a8be1f92"
     end
   end
 
